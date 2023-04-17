@@ -8,7 +8,7 @@ function TodoForm(props){
         setText(
             e.target.value
         )
-     } 
+     }
      const handleSubmit = (e)=>{
         e.preventDefault();
         props.onSubmit({
@@ -19,10 +19,13 @@ function TodoForm(props){
        setText("")
      }
      return (
+        <>
+        <h1>Today's Todo List</h1>
         <form onSubmit={handleSubmit}>
             <input className='input-field' type="text" onChange={handleChange} value={text}/>
             <button className='btn' onClick={handleSubmit}>Add Todo</button>
         </form>
+        </>
     );
 }
 
