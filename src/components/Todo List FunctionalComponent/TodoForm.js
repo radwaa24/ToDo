@@ -21,9 +21,9 @@ function TodoForm(props){
      return (
         <>
         <h1>Today's Todo List</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form">
             <input className='input-field' type="text" onChange={handleChange} value={text}/>
-            <button className='btn' onClick={handleSubmit}>Add Todo</button>
+            <button className='btn' id="btn" onClick={handleSubmit}>Add Todo</button>
         </form>
         </>
     );
